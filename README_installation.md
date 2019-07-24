@@ -46,10 +46,6 @@ vs. Laut Doku: Erstmal RASPI BCM2 (Pin 3) => PCA9685 SDA; RASPI BCM 3 (Pin 5) =>
 5V vom Netzteil.
 
 # Relais für Pumpe und Zeug
-
-https://indibit.de/raspberry-pi-gpio-ausgaenge-schalten-eingaenge-lesen/#Ausgang_schalten
-
-## Relais 
 Besser mit Treiber:
 http://www.susa.net/wordpress/2012/06/raspberry-pi-relay-using-gpio/
 
