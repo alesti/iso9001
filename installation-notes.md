@@ -1,6 +1,6 @@
 # Installationsnotizen ISO9001
 
-For english: Read the [README](README.md), sorry.
+For english readers: Please read the [README](README.md), sorry.
 
 Aleks' Ergänzungen zur [Original Doku Hector9000](https://cdn.hackaday.io/files/1615856913252640/H9000_ger_V0.2a.pdf) zum Cocktailbot [Hector9000](https://hackaday.io/project/161585-hector-9000)
 
@@ -93,7 +93,7 @@ Am liebsten das von Prusa, das Projekt ist mit PETG von 3djake gedruckt.
 
 ### Gleitlager, Ventilzungen
 
-Für das Gleitlager und die Ventilzungen benutze ich Igus Iglidur 150-PF (:[Datenblatt](doc-extern/iglidur-I-150-PF-Verarbeitungshinweise-FDM.pdf)). 
+Für das Gleitlager und die Ventilzungen benutze ich Igus Iglidur 150-PF ([Datenblatt](doc-extern/iglidur-I-150-PF-Verarbeitungshinweise-FDM.pdf)). 
 
 * Bett-Temperatur 60°
 * Düsentemperatur erste Schicht 250°, alle anderen 245°
@@ -101,7 +101,7 @@ Für das Gleitlager und die Ventilzungen benutze ich Igus Iglidur 150-PF (:[Date
 * Einstellung in PrusaSlicer Filamenttype PLA (keine Ahnung, was das für Auswirkungen hat)
 * Klebestift auf dem Druckbett. Ich hasse das, aber ohne gehts leider nicht
 
-## Montage
+## Hardware Montage
 ### Ventile
 
 Es sind vorsichtige Nacharbeiten notwendig, anscheinend insbesondere an den Schlitzen, in die die Ventilzungen eingesetzt werden.
@@ -114,3 +114,13 @@ Es sind vorsichtige Nacharbeiten notwendig, anscheinend insbesondere an den Schl
 Punkt 1 und 2 kann man tauschen, aber das Servo bekommt man nicht mehr in die Halterung, wenn die Zungen bereits montiert sind.
 
 Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön.
+
+### Beleuchtung
+
+Eventuell was mit einem großen Pi-Hut, liegt hier rum. Oder was mit DMX,
+Minispiegelkugel und Farbwechsler
+
+### Gehäuse
+
+Das ganze als Flightcase bauen, bei dem man die Vorder- und Rückseite
+als Deckel abnehmen kann. 
