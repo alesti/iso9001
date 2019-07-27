@@ -1,13 +1,16 @@
-# Hard- und Software Installationsnotizen
-## Installation Suffkopp (raspi)
+# Installationsnotizen ISO9001
+
+For english: Read the [README](README.md), sorry.
+
+Aleks' Ergänzungen zur [Original Doku Hector9000](https://cdn.hackaday.io/files/1615856913252640/H9000_ger_V0.2a.pdf) zum Cocktailbot [Hector9000](https://hackaday.io/project/161585-hector-9000)
+
+## Installation suffkopp (raspi)
 
 [Raspbian Buster Lite](https://www.raspberrypi.org/downloads/raspbian/)
 mit Etcher. 
 
-* raspi-config: SSH angeklemmt, Wlan, Lokalisierung, alle Schnittstellen
-erstmal an.
-* Accounts angelegt (aleks, sudo), cocktail für den ganzen
-  Scheiss. pi = /bin/false, sshd publickey-auth only, pi pw gescrambled.
+* raspi-config: SSH angeklemmt, Wlan, Lokalisierung, alle Schnittstellen erstmal an.
+* Accounts angelegt (aleks, sudo), cocktail für den ganzen Scheiss. pi => /bin/false, sshd publickey-auth only, pi pw gescrambled, auto security updates.
 * cocktail in die wesentlichen Gruppen gestopft
 * Zusätzliche Packages: 
 
