@@ -8,6 +8,10 @@ So far this repo will hold only my notes, errors, tests and stuff (in german, so
 If i really get it to a running cocktailmachine i will try to merge my notes (than in english) into the
 original project, but this will need some time.
 
+## docu starts
+
+[hier](installation-notes.md).
+
 ## do not use ...
 
 Please do not use the `stl-Files` directory, it might by outdated. Use the
