@@ -47,11 +47,19 @@ In `/home/cocktail/bin/` ein Startscript anlegen - die Anwendung hat
 lokale Pfade, ein `python3 path/to/repo/src/main.py` tut nicht in
 autostart. Dann nochmal in `/home/cocktail/.config/lxsession/LXDE/autostart` wie oben, plus `@/home/cocktail/bin/autostart.sh` - in der Systemautostart
 tut das nicht - hab gerade nicht genug Energie, um da reinzukriechen.
+Anscheinend bei jedem zweiten X Neustart? So ein Scheiss.
 
-FIXME: Touch tut noch nicht, es reagiert auf Finger (der Mauszeiger wird bewegt), aber es wird kein Event ausgelöst.
+Das Touchdisplay funktioniert in Kivy nicht, auf dem LXDE Desktop aber. 
+Geholfen hat eine Ergänzung in `.kivy/config.ini`
+
+```
+mtdev_%(name)s = probesysfs,provider=mtdev
+hid_%(name)s = probesysfs,provider=hidinput
+```
 
 Links: [Raspi Kiosk
-Mode](https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/), [Tipps](https://github.com/MobilityLab/TransitScreen/wiki/Raspberry-Pi) 
+Mode](https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/), [Tipps](https://github.com/MobilityLab/TransitScreen/wiki/Raspberry-Pi), [Touch Input not recogonised in Kivy](https://groups.google.com/forum/#!msg/kivy-users/7a8yz1oZ3Z0/Asy14nx2BQAJ).
+
 
 ## Adafruit PCA9685 Servo Driver
 
