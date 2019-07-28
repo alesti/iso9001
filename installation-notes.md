@@ -17,7 +17,41 @@ mit Etcher.
 ```
 etckeeper git vim screen python3-dev python3-pip python3-smbus 
 i2c-tools python3-rpi.gpio adafruit-circuitpython-servokit
+xinit lxde-core lxterminal lxappearance lightdm unclutter
 ```
+
+### LXDE und Kioskmode 
+
+Die Anwendung läuft im Fullscreen auf dem HDMI-Display. Ich will, dass
+diese alleine hochkommt, also alleine in X gebootet und die Anwendung
+gestartet wird.
+
+In `raspi-config, boot options` Desktop, autologin einschalten,
+Login-User in `/etc/lightdm/lightdm.conf` den autologin User setzen.
+
+In `/etc/xdg/lxsession/LXDE/autostart` eintragen:
+
+```
+# https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
+
+@lxpanel --profile LXDE
+@pcmanfm --desktop --profile LXDE
+# @xscreensaver -no-splash
+
+@xset s off
+@xset -dpms
+@xset s noblank
+```
+
+In `/home/cocktail/bin/` ein Startscript anlegen - die Anwendung hat
+lokale Pfade, ein `python3 path/to/repo/src/main.py` tut nicht in
+autostart. Dann nochmal in `/home/cocktail/.config/lxsession/LXDE/autostart` wie oben, plus `@/home/cocktail/bin/autostart.sh` - in der Systemautostart
+tut das nicht - hab gerade nicht genug Energie, um da reinzukriechen.
+
+FIXME: Touch tut noch nicht, es reagiert auf Finger (der Mauszeiger wird bewegt), aber es wird kein Event ausgelöst.
+
+Links: [Raspi Kiosk
+Mode](https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/), [Tipps](https://github.com/MobilityLab/TransitScreen/wiki/Raspberry-Pi) 
 
 ## Adafruit PCA9685 Servo Driver
 
@@ -154,3 +188,5 @@ Minispiegelkugel und Farbwechsler
 
 Das ganze als Flightcase bauen, bei dem man die Vorder- und Rückseite
 als Deckel abnehmen kann. 
+
+Um die passenden Schrauben zu bestellen zu können, geh ich erstmal von einer 12mm Siebdruckplatte als Rückwand, Servohalterung und so weiter aus.
