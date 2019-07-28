@@ -1,9 +1,21 @@
-# was noch fehlt
+# Einkaufsliste
 
-## Schrauben/Befestigungen
+## Offen
 
+### Bauhaus
+
+* U-Profil Alu 13x8x210mm 
+* Gewindestange M3 (260mm)
+* Alu-Vierkantprofil 15.5x15.5 (Länge noch unklar)
+
+### Amazonk
+
+* HDMI Kabel mit sehr kurzem Stecker
+* Mehr Siliconschlauch
+
+## bestellt
 ### Wegertseder
-rostfrei A2
+meist rostfrei A2
 
 | Anzahl | was | Bestellnummer | wofür
 | --- | --- | --- | --- |
@@ -15,9 +27,3 @@ rostfrei A2
 | 100 | M3 Muttern | 2896-146, DIN 934 | |
 | 100 | M3 Selbsichernde Muttern| 3346-232, DIN 985| |
 | 200 | M3 Scheiben | 1498-294, DIN 125  | |
-
-### Bauhaus
-
-* U-Profil Alu 13x8x210mm 
-* Gewindestange M3 (260mm)
-* Alu-Vierkantprofil 15.5x15.5 (Länge noch unklar)
