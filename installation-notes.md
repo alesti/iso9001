@@ -109,6 +109,12 @@ Es gibt je ein (sehr primitives) Testscript, die die generelle Funktion des Rela
 
 Die Servos drehen mit dem Testskript um XX° gegen den Uhrzeigersinn. 50° scheint ganz gut zu sein.
 
+## Stepper Motor
+
+Noch ziemlich unklar, geht nach 
+https://www.rototron.info/raspberry-pi-stepper-motor-tutorial/ gebaut
+jedenfalls nicht.
+
 ## Display
 
 Nach Doku die `/boot/config.txt` ändern:

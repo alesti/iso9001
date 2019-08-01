@@ -1,29 +1,31 @@
 # Einkaufsliste
 
-## Offen
-
-### Bauhaus
+## Bauhaus
 
 * U-Profil Alu 13x8x210mm 
 * Gewindestange M3 (260mm)
 * Alu-Vierkantprofil 15.5x15.5 (Länge noch unklar)
+* Schrauben zum Befestigen des Wägegehäusedeckels (selbstschneidend, 3,5
+  oder 4mm)
+* Schrauben zum Befestigen der Wäagezelle (wahrscheinlich M4)  
 
-### Amazonk
 
-* HDMI Kabel mit sehr kurzem Stecker
-* Mehr Siliconschlauch
+## Amazonk
 
-## bestellt
-### Wegertseder
-meist rostfrei A2
+* HDMI Kabel mit sehr kurzem Stecker oder
+  [Winkel](https://www.amazon.de/UGREEN-Adapter-Konverter-vergoldete-Kontakte/dp/B00QV3IYBM)
+* mehr (30m) [Siliconschlauch](https://www.amazon.de/gp/product/B075ZPGTGM)
+* T-Stücke passend für 6x4 Schlauch (14x)
+* Silikonschlauch mit 10mm Innendurchmesser (Tropfschale Waage und für
+  Spültrichter)
+* restliche
+  [Flaschentüllendinger](https://www.amazon.de/gp/product/B01N4KVGM7) 
 
-| Anzahl | was | Bestellnummer | wofür
-| --- | --- | --- | --- |
-| 48  |M3 hex 10mm | 2534-280, DIN 912 | Servo im Ventil befestigen |
-| 24 | M3 hex 35mm | 2534-298, DIN 912 | Ventilabdeckungen
-| 48  |M3 hex 18mm Flachkopf| 2576-546, ISO 7380 | Ventile auf Siebdruckplatte (12mm) für Einschlagmuttern|
-| 100 |M3 Einschlagmuttern | 3220-626 | f. Ventile, Hutschienen, Pumpe, alles was an der Rückwand hängt 
-| 25 | M3 Rändelmutter | 2066-832, DIN 466 | Ventilabdeckungen, Tropfenhalterung
-| 100 | M3 Muttern | 2896-146, DIN 934 | |
-| 100 | M3 Selbsichernde Muttern| 3346-232, DIN 985| |
-| 200 | M3 Scheiben | 1498-294, DIN 125  | |
+
+## Unklar
+
+Kanister, evtl.
+https://www.amazon.de/Leerkanister-Neu-mit-Sicherheitsverschluss-Lebensmittelecht/dp/B00XJL5TG2
+190x140x260mm
+
+
