@@ -14,11 +14,11 @@ SPR = 200 # steps per revolution (360 / 1.8)
 
 GPIO.setup(DIR, GPIO.OUT)
 GPIO.setup(STEP, GPIO.OUT)
-GPIO.output(DIR, CW)
 
 step_count = SPR
 delay = .0208
 
+GPIO.output(DIR, CW)
 for x in range(step_count):
     GPIO.output(STEP, GPIO.HIGH)
     sleep(delay)
@@ -26,6 +26,7 @@ for x in range(step_count):
     sleep(delay)
 
 sleep(.5)
+
 GPIO.output(DIR, CCW)
 for x in range(step_count):
     GPIO.output(STEP, GPIO.HIGH)
