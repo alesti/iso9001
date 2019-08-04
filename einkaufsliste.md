@@ -20,4 +20,5 @@ Kabelmanagement => Verdrahtungskanal ist das Suchwort
 
 Abdeckung Ventile (Plexiglas)
 
-
+### Plexiglas
+https://kunststoffplattenonline.de/product/acrylglas-platte-getoent-gelb-3-mm/
