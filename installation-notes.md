@@ -2,16 +2,17 @@
 
 For english readers: Please read the [README](README.md), sorry.
 
-Aleks' Ergänzungen zur [Original Doku Hector9000](https://cdn.hackaday.io/files/1615856913252640/H9000_ger_V0.2a.pdf) zum Cocktailbot [Hector9000](https://hackaday.io/project/161585-hector-9000)
+Aleks' Ergänzungen zur [Original Doku Hector9000](https://cdn.hackaday.io/files/1615856913252640/H9000_ger_V0.2a.pdf) zum Cocktailbot [Hector9000](https://hackaday.io/project/161585-hector-9000).
 
 ## Installation suffkopp (raspi)
 
 [Raspbian Buster Lite](https://www.raspberrypi.org/downloads/raspbian/)
 mit Etcher. 
 
-* raspi-config: SSH angeklemmt, Wlan, Lokalisierung, alle Schnittstellen erstmal an.
-* Accounts angelegt (aleks, sudo), cocktail für den ganzen Scheiss. pi => /bin/false, sshd publickey-auth only, pi pw gescrambled, auto security updates.
+* raspi-config: SSH angeklemmt, Wifi, Lokalisierung, alle Schnittstellen erstmal an.
+* Accounts angelegt (aleks, sudo), cocktail für den ganzen Scheiss. pi => /bin/false,  pi pw gescrambled, auto security updates.
 * cocktail in die wesentlichen Gruppen gestopft
+* sshd publickey-auth only
 * Zusätzliche Packages: 
 
 ```
@@ -36,8 +37,6 @@ In `/etc/xdg/lxsession/LXDE/autostart` eintragen:
 
 @lxpanel --profile LXDE
 @pcmanfm --desktop --profile LXDE
-# @xscreensaver -no-splash
-
 @xset s off
 @xset -dpms
 @xset s noblank
@@ -50,16 +49,29 @@ tut das nicht - hab gerade nicht genug Energie, um da reinzukriechen.
 Anscheinend bei jedem zweiten X Neustart? So ein Scheiss.
 
 Das Touchdisplay funktioniert in Kivy nicht, auf dem LXDE Desktop aber. 
-Geholfen hat eine Ergänzung in `.kivy/config.ini`
+Geholfen hat eine Ergänzung in `.kivy/config.ini` ([Touch Input not recogonised in Kivy](https://groups.google.com/forum/#!msg/kivy-users/7a8yz1oZ3Z0/Asy14nx2BQAJ)):
 
 ```
 mtdev_%(name)s = probesysfs,provider=mtdev
 hid_%(name)s = probesysfs,provider=hidinput
 ```
 
-Links: [Raspi Kiosk
-Mode](https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/), [Tipps](https://github.com/MobilityLab/TransitScreen/wiki/Raspberry-Pi), [Touch Input not recogonised in Kivy](https://groups.google.com/forum/#!msg/kivy-users/7a8yz1oZ3Z0/Asy14nx2BQAJ).
+Zum Kiokmode: [Raspi Kiosk
+Mode](https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/), [Tipps](https://github.com/MobilityLab/TransitScreen/wiki/Raspberry-Pi).
 
+## ATX Netzteil 
+
+Ist genormt, siehe [PSU as workbench supply](https://www.electronics-tutorials.ws/blog/convert-atx-psu-to-bench-supply.html):
+
+Farbe | Spannung | Info
+----- | ---- | ----
+orange | 3,3V |
+rot|  5V | 
+gelb| 12V|
+grün| 5V switch on| auf Masse ziehen
+schwarz|  Masse|
+
+Um das Netzteil ohne Motherboard zu benutzen, PIN16/grün auf Masse ziehen. Das Netzteil braucht eine (sehr geringe) Grundlast, damit es läuft.
 
 ## Adafruit PCA9685 Servo Driver
 
@@ -88,32 +100,41 @@ vs. Laut Doku: Erstmal RASPI BCM2 (Pin 3) => PCA9685 SDA; RASPI BCM 3 (Pin 5) =>
 
 Relaisboard besser [mit Treiber](http://www.susa.net/wordpress/2012/06/raspberry-pi-relay-using-gpio/) fahren, mindestens nen 1Kohm Widerstand pro GPIO.
 
+Weiteres Relais für Beleuchtung, eventuell Spiegelkugel oder anderer Aufmerksamkeitsschnickschnack.
 
-## ATX Netzteil 
+## Stepper Motor
 
-Ist genormt, siehe [PSU as workbench supply](https://www.electronics-tutorials.ws/blog/convert-atx-psu-to-bench-supply.html):
+Ich verwende diesen [Motor](https://www.amazon.de/gp/product/B07GLMGQB3).
 
-Farbe | Spannung | Info
------ | ---- | ----
-orange | 3,3V |
-rot|  5V | 
-gelb| 12V|
-grün| 5V switch on| auf Masse ziehen
-schwarz|  Masse|
+Farbe | PIN | Coil
+----- | --- | ----
+rot | A / 1 | 1
+blau| C / 4 | 1
+schwarz | B / 3 | 2 
+grün | D / 6 | 2
+## Waage
 
-Um das Netzteil ohne Motherboard zu benutzen, PIN16/grün auf Masse ziehen. Das Netzteil braucht eine (geringe) Grundlast, damit es läuft.
+Schrauben in M5. 
 
-## Test von Servos und Relais
+
+Farbe | PIN 
+----- | ---- 
+Rot | E+ |
+Schwarz | E-
+Grün | A-
+Weiss | A+
+VCC | 3,3V
+
+## Test von Servos, Relais, Stepper, Waage
 
 Es gibt je ein (sehr primitives) Testscript, die die generelle Funktion des Relaisboards und des Servokontrollers testet, siehe unter hw-tests im Repo.
 
 Die Servos drehen mit dem Testskript um XX° gegen den Uhrzeigersinn. 50° scheint ganz gut zu sein.
 
-## Stepper Motor
+Zum Testen der Waage hab ich [HX711 Beispiele](https://github.com/gandalf15/HX711/blob/master/HX711_Python3/all_methods_example.py) genommen, einfach um rauszufinden, wie die Belegung der Drähte ist und welche Seite des Balkens unten ist.
 
-Noch ziemlich unklar, geht nach 
-https://www.rototron.info/raspberry-pi-stepper-motor-tutorial/ gebaut
-jedenfalls nicht.
+Zum Testen des Steppers habe ich ein Skript nach https://www.rototron.info/raspberry-pi-stepper-motor-tutorial/ gebaut. Manchmal funktioniert es.
+Es rappelt ziemlich (es sind nur [STEP und DIR (wie hier)](https://www.pololu.com/picture/view/0J3360) verbunden für den Test). 
 
 ## Display
 
@@ -160,12 +181,12 @@ Drucker: Prusa i3 MK3S, eingehaust
 
 ### Allgemein
 
-Ich benutze PETG, geht wunderbar. 
-Am liebsten das von Prusa, das Projekt ist mit PETG von 3djake gedruckt.
+Ich benutze hauptsächlich PETG, geht wunderbar, am liebsten das von Prusa.
+Das Projekt ist zu 90% mit PETG von 3djake gedruckt, das war aber ziemlich scheisse aufgespult, mir ist ein paar Mal die Rolle abgesprungen, kaufe ich nicht noch mal.
 
 ### Gleitlager, Ventilzungen
 
-Für das Gleitlager und die Ventilzungen benutze ich Igus Iglidur 150-PF ([Datenblatt](doc-extern/iglidur-I-150-PF-Verarbeitungshinweise-FDM.pdf)). 
+Für das Gleitlager und die Ventilzungen benutze ich wie im Original vorgeschlagen Igus Iglidur 150-PF ([Datenblatt](doc-extern/iglidur-I-150-PF-Verarbeitungshinweise-FDM.pdf)). 
 
 * Bett-Temperatur 60°
 * Düsentemperatur erste Schicht 250°, alle anderen 245°
@@ -179,28 +200,37 @@ Für das Gleitlager und die Ventilzungen benutze ich Igus Iglidur 150-PF ([Daten
 Es sind vorsichtige Nacharbeiten notwendig, anscheinend insbesondere an den Schlitzen, in die die Ventilzungen eingesetzt werden.
 
 1. Die Servos müssen als erstes in die Halterung
-2. Schlauch
 3. Ventilzungen
+2. Schlauch
 4. Servokopf
 
 Punkt 1 und 2 kann man tauschen, aber das Servo bekommt man nicht mehr in die Halterung, wenn die Zungen bereits montiert sind.
 
-Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön.
+Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön, anscheinend schneidet [kunstoffplattenonline](kunststoffplattenonline.de) auch unter 10cm zu.
 
 ### Display
 
 Testweise mit den beiliegenden Kunststoffschrauben im Rahmen montiert.
 Anderes HDMI-Kabel mit abgewinkeltem oder kurzem Stecker nötig, nicht
 viel Platz im Gehäuse.
+Selbst mit abgewinkeltem Stecker ist das kacka, weil das dann mit dem Micro-USB kollidiert.
+
+### Notaustaster (Pumpe)
+
+Sinnvoll? Verhindert eventuell Sauereien.
 
 ### Beleuchtung
 
-Eventuell was mit einem großen Pi-Hut, liegt hier rum. Oder was mit DMX,
-Minispiegelkugel und Farbwechsler
+Eventuell was mit einem großen Pi-Hat, liegt hier rum. Oder was mit DMX,
+Minispiegelkugel und Farbwechsler. 
 
 ### Gehäuse
 
 Das ganze als Flightcase bauen, bei dem man die Vorder- und Rückseite
-als Deckel abnehmen kann. 
+als Deckel abnehmen kann. Mir gefällt ohne Verhandlungen bisher [Casebuilder](https://www.casebuilder.com/de/benutzerdefinierte-flightcase-html/rackcasedouble/entwurf) am besten.
 
 Um die passenden Schrauben zu bestellen zu können, geh ich erstmal von einer 12mm Siebdruckplatte als Rückwand, Servohalterung und so weiter aus.
+
+Es gibt 0,8mm Alublech bei Bauhaus (bis 1000 x 2000mm), das lässt sich gut mit normalen Werkzeugen bearbeiten.
+
+Die Siebdruckplatte dann mit Alublech beplanken (Popnieten), ebenso für den Tisch verfahren und auch die Seitenwände und den Flaschenboden damit auskleiden (wegen der Reflexionen).
