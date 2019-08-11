@@ -148,16 +148,6 @@ hdmi_drive=1
 
 Booten, fertig.
 
-```
-[So Jul 28 09:02:39 2019] usb 1-1.1.3: New USB device found, idVendor=0eef, idProduct=0005, bcdDevice= 2.00
-[So Jul 28 09:02:39 2019] usb 1-1.1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
-[So Jul 28 09:02:39 2019] usb 1-1.1.3: Product: WS170120
-[So Jul 28 09:02:39 2019] usb 1-1.1.3: Manufacturer: WaveShare
-[So Jul 28 09:02:39 2019] usb 1-1.1.3: SerialNumber: ^Zë8157A920
-[So Jul 28 09:02:39 2019] input: WaveShare WS170120 as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.1/1-1.1.3/1-1.1.3:1.0/0003:0EEF:0005.0001/input/input0
-[So Jul 28 09:02:39 2019] hid-generic 0003:0EEF:0005.0001: input,hidraw0: USB HID v1.10 Device [WaveShare WS170120] on usb-3f980000.usb-1.1.3/input0
-```
-
 [Original Wiki](https://www.waveshare.com/wiki/7inch_HDMI_LCD_(C)),
 
 ### Kivy Installation
@@ -201,14 +191,14 @@ Es sind vorsichtige Nacharbeiten notwendig, anscheinend insbesondere an den Schl
 
 Punkt 1 und 2 kann man tauschen, aber das Servo bekommt man nicht mehr in die Halterung, wenn die Zungen bereits montiert sind.
 
-Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön, anscheinend schneidet [kunstoffplattenonline](kunststoffplattenonline.de) auch unter 10cm zu - nein, tun sie nicht, wenn man was in den Warenkorb legt, muss es mindestens 10cm haben.
+Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön, ~~anscheinend schneidet [kunstoffplattenonline](kunststoffplattenonline.de) auch unter 10cm zu~~ - nein, tun sie nicht, wenn man was in den Warenkorb legt, muss es mindestens 10cm haben.
 
 ### Display
 
 Anderes HDMI-Kabel mit abgewinkeltem oder kurzem Stecker nötig, nicht
 viel Platz im Gehäuse -- selbst mit abgewinkeltem Stecker ist das kacka, weil das dann mit dem Micro-USB kollidiert.
 Wahrscheinlich haben die das im Original mit einem Flachbandkabel
-realisiert und den eigenen Stecker erst an der Rückwand des Rahmens eine HDMI-Buchse angeschlossen. 
+realisiert und den eigenen Stecker erst an der Rückwand des Rahmens eine HDMI-Buchse angeschlossen.
 
 Ich hab das jetzt ausgebrochen und gut ist.
 
@@ -218,17 +208,16 @@ Sinnvoll? Verhindert eventuell Sauereien.
 
 ### Beleuchtung
 
-Eventuell was mit einem großen Pi-Hat, liegt hier rum. Oder was mit DMX,
-Minispiegelkugel und Farbwechsler. 
+Eventuell was mit einem großen Pi-Hat, liegt hier rum. Oder was mit DMX, Minispiegelkugel und Farbwechsler. 
 
 ## Mindestabmessungen Montage in mm
 
-###[Ventilgehäuse](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipPRc8o6I_D1Nod3YFpAS-qCG68FnTidyAR73DMF?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB):
+### [Ventilgehäuse](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipPRc8o6I_D1Nod3YFpAS-qCG68FnTidyAR73DMF?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB):
 
 * Platz für Servoausschnitt: 15 - 20 (Servo) - 15 (macht zusammen 50)
 * Platz für Servoausschnitt: 16 - 58 (Servo) - 16 (macht zusamnen 90)
 
-#### [Alle Ventilgehäuse zusammen](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipMRqTnI6m-zkJFATKUl3cBvPN3G64qVepazVG0M?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB)
+[Alle Ventilgehäuse zusammen](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipMRqTnI6m-zkJFATKUl3cBvPN3G64qVepazVG0M?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB)
 
 * 6 Stück nebeneinander 300, immer noch 90 hoch :)
 * Abstand zwischen den Reihen im Testbrett 47. Vielleicht später 50. Weniger eher nicht, sonst knicken die Schläuche zu stark.
@@ -236,7 +225,7 @@ Minispiegelkugel und Farbwechsler.
 ### Arm 
 #### Höhe Unterkante Arm über dem Boden
 
-__!Achtung, Testaufbau hat größeren Abstand nach unten - von oben gemessen stimmt es!__
+__!! Achtung, Testaufbau hat größeren Abstand nach unten - von oben gemessen stimmts !!__
 
 * Waage 16 (plus 2mm Spalt)
 * Glas ([Ikea Pokal, 35cl](https://www.ikea.com/de/de/p/pokal-glas-klarglas-10270478/)) 140, (oder Glas ([Ikea, Vardagen, 43cl](https://www.ikea.com/de/de/p/vardagen-glas-klarglas-70313106/)) 130, kleiner, mehr Fassungsvermögen)
@@ -251,13 +240,7 @@ __!Achtung, Testaufbau hat größeren Abstand nach unten - von oben gemessen sti
 => 55 
 
 * Arm: 15,5 
-* Abstand zum Abtropfarm 2 - 4 
-
-#### Abstand zwischen Unterkante Arm und Boden
-
-Rechnerisch: 
-
-180 + 15,5 + 55 = ~ 250 
+* Abstand zum Abtropfarm ~2 
 
 #### Länge Arm, Position Zahnstange
 
@@ -303,6 +286,3 @@ Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für 
 * 3x4 Flaschenfläche: 270 x 360
 * Kanister 3 Liter: Fläche 150 x 115, Höhe 240
 * Kanister 5 Liter: Fläche 190 x 145, Höhe 250
-
-
-  
