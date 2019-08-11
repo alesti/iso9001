@@ -75,6 +75,8 @@ schwarz|  Masse|
 
 Um das Netzteil ohne Motherboard zu benutzen, PIN16/grün auf Masse ziehen. Das Netzteil braucht eine (sehr geringe) Grundlast, damit es läuft.
 
+Masse: Tiefe 140mm plus Kabelbaum, 80mm hoch, 150mm breit. M3 Gewinde zum Anschrauben.
+
 ## Adafruit PCA9685 Servo Driver
 
 [Wie Servodriver anschliessen?](https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/configuring-your-pi-for-i2c)
@@ -234,11 +236,15 @@ Minispiegelkugel und Farbwechsler.
 ### Arm 
 #### Höhe Unterkante Arm über dem Boden
 
+__!Achtung, Testaufbau hat größeren Abstand nach unten - von oben gemessen stimmt es!__
+
 * Waage 16 (plus 2mm Spalt)
 * Glas ([Ikea Pokal, 35cl](https://www.ikea.com/de/de/p/pokal-glas-klarglas-10270478/)) 140, (oder Glas ([Ikea, Vardagen, 43cl](https://www.ikea.com/de/de/p/vardagen-glas-klarglas-70313106/)) 130, kleiner, mehr Fassungsvermögen)
-* etwas Platz zum Arm: 20
+* etwas Platz zum Arm: 15
 
 =>  180 sollten es sein.
+
+=> __Testaufbau__ hat 220! Das ist zuviel!
 
 #### Abstand zwischen Oberkante Arm und unterem Ventilkörper
 
@@ -255,7 +261,9 @@ Rechnerisch:
 
 #### Länge Arm, Position Zahnstange
 
-Erstmal grob 270, das ist auf jeden Fall zu lang.
+* Erstmal grob 270, das ist auf jeden Fall zu lang, kann wohl um 80 gekürzt werden (ist rot markiert).
+* Position ausgefahren: Freie Länge von Wand bis Armende (ohne Schlauchhalter) 120.
+
 
 ### Glockenkram / Finger
 
@@ -277,4 +285,24 @@ Um die passenden Schrauben zu bestellen zu können, geh ich erstmal von einer 12
 
 Es gibt 0,8mm Alublech bei Bauhaus (bis 1000 x 2000mm), das lässt sich gut mit normalen Werkzeugen bearbeiten.
 
-Die Siebdruckplatte dann mit Alublech beplanken (Popnieten), ebenso für den Tisch verfahren und auch die Seitenwände und den Flaschenboden damit auskleiden (wegen der Reflexionen).
+Die Siebdruckplatte dann mit Alublech beplanken (Kleben, Popnieten), ebenso für den Tisch verfahren und auch die Seitenwände und den Flaschenboden damit auskleiden (wegen der geilen Reflexionen).
+
+Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für die LED-Beleuchtung.
+
+### Maße (erste Näherung)
+
+#### Mechanik, Oberteil
+* Allein für die Mechanik reicht eine Höhe des oberen Teils von 520mm und eine Breite von 420mm. 
+* Tiefe Tisch (auf dem Waage und Glocke stehen) 220mm.
+* Tiefe Rückseite (ohne Technikträgerbrett, 9mm plus Alublech) mindestens 150mm (das ist die Tiefe des Netzteils).
+* Rückwand im unteren Bereich plus Netzteilhöhe 9mm plus Alublech
+* Gesamttiefe also bisher 220 + 10 + 160 + 10 = 400
+
+#### Flaschenboden
+* Literflaschen: Ø 90mm, Höhe 320mm plus Stopfen (20) pluss etwas Luft für den Schlauch 45mm, zusammen 385.
+* 3x4 Flaschenfläche: 270 x 360
+* Kanister 3 Liter: Fläche 150 x 115, Höhe 240
+* Kanister 5 Liter: Fläche 190 x 145, Höhe 250
+
+
+  
