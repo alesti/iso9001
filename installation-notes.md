@@ -4,6 +4,8 @@ For english readers: Please read the [README](README.md), sorry.
 
 Aleks' Ergänzungen zur [Original Doku Hector9000](https://cdn.hackaday.io/files/1615856913252640/H9000_ger_V0.2a.pdf) zum Cocktailbot [Hector9000](https://hackaday.io/project/161585-hector-9000).
 
+[Bilder vom Bau und Konzeptionskram](https://photos.app.goo.gl/biA2kgEKCT5nZmoh6) 
+
 ## Installation suffkopp (raspi)
 
 [Raspbian Buster Lite](https://www.raspberrypi.org/downloads/raspbian/)
@@ -81,15 +83,6 @@ Testen, ob er da ist:
 
 ```
 root@suffkopp:~# sudo i2cdetect -y 1
-     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-00:          -- -- -- -- -- -- -- -- -- -- -- -- --
-10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-70: -- -- -- -- -- -- -- --
 ```
 [Adafruit Servo Driver](https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/hooking-it-up), [Bild in gross](https://cdn-learn.adafruit.com/assets/assets/000/069/564/original/components_raspi_pca9685_i2c_with_servo.jpg?1547757668)
 
@@ -206,14 +199,16 @@ Es sind vorsichtige Nacharbeiten notwendig, anscheinend insbesondere an den Schl
 
 Punkt 1 und 2 kann man tauschen, aber das Servo bekommt man nicht mehr in die Halterung, wenn die Zungen bereits montiert sind.
 
-Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön, anscheinend schneidet [kunstoffplattenonline](kunststoffplattenonline.de) auch unter 10cm zu.
+Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön, anscheinend schneidet [kunstoffplattenonline](kunststoffplattenonline.de) auch unter 10cm zu - nein, tun sie nicht, wenn man was in den Warenkorb legt, muss es mindestens 10cm haben.
 
 ### Display
 
-Testweise mit den beiliegenden Kunststoffschrauben im Rahmen montiert.
 Anderes HDMI-Kabel mit abgewinkeltem oder kurzem Stecker nötig, nicht
-viel Platz im Gehäuse.
-Selbst mit abgewinkeltem Stecker ist das kacka, weil das dann mit dem Micro-USB kollidiert.
+viel Platz im Gehäuse -- selbst mit abgewinkeltem Stecker ist das kacka, weil das dann mit dem Micro-USB kollidiert.
+Wahrscheinlich haben die das im Original mit einem Flachbandkabel
+realisiert und den eigenen Stecker erst an der Rückwand des Rahmens eine HDMI-Buchse angeschlossen. 
+
+Ich hab das jetzt ausgebrochen und gut ist.
 
 ### Notaustaster (Pumpe)
 
@@ -224,7 +219,56 @@ Sinnvoll? Verhindert eventuell Sauereien.
 Eventuell was mit einem großen Pi-Hat, liegt hier rum. Oder was mit DMX,
 Minispiegelkugel und Farbwechsler. 
 
-### Gehäuse
+## Mindestabmessungen Montage in mm
+
+###[Ventilgehäuse](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipPRc8o6I_D1Nod3YFpAS-qCG68FnTidyAR73DMF?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB):
+
+* Platz für Servoausschnitt: 15 - 20 (Servo) - 15 (macht zusammen 50)
+* Platz für Servoausschnitt: 16 - 58 (Servo) - 16 (macht zusamnen 90)
+
+#### [Alle Ventilgehäuse zusammen](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipMRqTnI6m-zkJFATKUl3cBvPN3G64qVepazVG0M?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB)
+
+* 6 Stück nebeneinander 300, immer noch 90 hoch :)
+* Abstand zwischen den Reihen im Testbrett 47. Vielleicht später 50. Weniger eher nicht, sonst knicken die Schläuche zu stark.
+
+### Arm 
+#### Höhe Unterkante Arm über dem Boden
+
+* Waage 16 (plus 2mm Spalt)
+* Glas ([Ikea Pokal, 35cl](https://www.ikea.com/de/de/p/pokal-glas-klarglas-10270478/)) 140, (oder Glas ([Ikea, Vardagen, 43cl](https://www.ikea.com/de/de/p/vardagen-glas-klarglas-70313106/)) 130, kleiner, mehr Fassungsvermögen)
+* etwas Platz zum Arm: 20
+
+=>  180 sollten es sein.
+
+#### Abstand zwischen Oberkante Arm und unterem Ventilkörper
+
+=> 55 
+
+* Arm: 15,5 
+* Abstand zum Abtropfarm 2 - 4 
+
+#### Abstand zwischen Unterkante Arm und Boden
+
+Rechnerisch: 
+
+180 + 15,5 + 55 = ~ 250 
+
+#### Länge Arm, Position Zahnstange
+
+Erstmal grob 270, das ist auf jeden Fall zu lang.
+
+### Glockenkram / Finger
+
+Der `Mittelpunkt der Glocke` soll 100mm vom Drehpunkt des Fingers entfernt sein. 
+~~Ich nehme mal an, dass der Drehpunkt auch auf der gleichen Höhe sein muss wie der Glockenknopf.~~ [Nee, ausprobiert. Der Drehpunkt muss auf der gleichen Höhe sein wie die untere Servobefestigung](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipNqxUpgVL77Z1uqbnDNZ0QqbEzxEzWZy4f_9zic?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB).
+
+* Höhe Glocke mit gedrucktem Unterbau: 61 (jetzt eher irrelevant)
+* Abstand Servogehäuse unten (Kabelseite) bis Drehpunkt: 30
+* Abstand vom Fingerloch (Unterkante) bis Servogehäuse Oberkante): 40
+* Abstand vom Fingerloch (Oberkante) bis Servogehäuse Oberkante): 62
+
+
+## Gehäuse
 
 Das ganze als Flightcase bauen, bei dem man die Vorder- und Rückseite
 als Deckel abnehmen kann. Mir gefällt ohne Verhandlungen bisher [Casebuilder](https://www.casebuilder.com/de/benutzerdefinierte-flightcase-html/rackcasedouble/entwurf) am besten.
