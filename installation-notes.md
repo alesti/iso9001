@@ -286,3 +286,34 @@ Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für 
 * 3x4 Flaschenfläche: 270 x 360
 * Kanister 3 Liter: Fläche 150 x 115, Höhe 240
 * Kanister 5 Liter: Fläche 190 x 145, Höhe 250
+
+Auf eine Grundfläche von 600 x 420 bekommt man 3 5L Kanister und 12
+Flaschen - mehr als genug.
+
+#### Tisch
+
+Für Waage und Glocke. 220 x 600.
+
+#### Rückwand
+
+Vom Boden bis 200 mm über Tischhöhe?
+
+#### Gesamt
+
+Grundfläche 600 x 420
+
+Höhe Flaschenboden 400
+Höhe Tisch 10
+Höhe Oberteil 520
+
+=> Casebuilder Standard, Birkensperrholz/PVC mit bunt
+
+| Masse | Länge | Breite | Höhe |
+|-------|-------|--------|------|
+| innen | 550   | 650 | 930 |
+| aussen | 590 | 690 | 970 | 
+
+Und Art-Nr 0611 - F-Profil 9,1mm für den Waagentisch (beide Seiten, Rückseite an Mechanikwand), für Mechanikwand (beide Seiten), für Rückwand (beide Seiten, Boden).
+
+?? Kantenschutz für Tischkante vorn und Oberkante Rückwand Art-Nr 0655 - U-Profil 9mm
+
