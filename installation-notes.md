@@ -225,8 +225,6 @@ Eventuell was mit einem großen Pi-Hat, liegt hier rum. Oder was mit DMX, Minisp
 ### Arm 
 #### Höhe Unterkante Arm über dem Boden
 
-__!! Achtung, Testaufbau hat größeren Abstand nach unten - von oben gemessen stimmts !!__
-
 * Waage 16 (plus 2mm Spalt)
 * Glas ([Ikea Pokal, 35cl](https://www.ikea.com/de/de/p/pokal-glas-klarglas-10270478/)) 140, (oder Glas ([Ikea, Vardagen, 43cl](https://www.ikea.com/de/de/p/vardagen-glas-klarglas-70313106/)) 130, kleiner, mehr Fassungsvermögen)
 * etwas Platz zum Arm: 15
@@ -251,9 +249,10 @@ __!! Achtung, Testaufbau hat größeren Abstand nach unten - von oben gemessen s
 ### Glockenkram / Finger
 
 Der `Mittelpunkt der Glocke` soll 100mm vom Drehpunkt des Fingers entfernt sein. 
-~~Ich nehme mal an, dass der Drehpunkt auch auf der gleichen Höhe sein muss wie der Glockenknopf.~~ [Nee, ausprobiert. Der Drehpunkt muss auf der gleichen Höhe sein wie die untere Servobefestigung](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipNqxUpgVL77Z1uqbnDNZ0QqbEzxEzWZy4f_9zic?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB).
+~~Ich nehme mal an, dass der Drehpunkt auch auf der gleichen Höhe sein muss wie der Glockenknopf.~~ [Nee, ausprobiert. Die untere Servobefestigung muss auf der gleichen Höhe sein wie der Tisch](https://photos.google.com/share/AF1QipNlWgx3b4bBSz2jLp8mGbXrvzWVxSNpFHqbeOVvxxnjIGTGQ0EjMjqpo94DNAowvg/photo/AF1QipNqxUpgVL77Z1uqbnDNZ0QqbEzxEzWZy4f_9zic?key=MGdOcG9Cd2RHd2R5Q2p6MzljdEdwZjMtbndiVHJB).
 
 * Höhe Glocke mit gedrucktem Unterbau: 61 (jetzt eher irrelevant)
+* Höhe Servogehäuse 78
 * Abstand Servogehäuse unten (Kabelseite) bis Drehpunkt: 30
 * Abstand vom Fingerloch (Unterkante) bis Servogehäuse Oberkante): 40
 * Abstand vom Fingerloch (Oberkante) bis Servogehäuse Oberkante): 62
@@ -275,11 +274,30 @@ Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für 
 ### Maße (erste Näherung)
 
 #### Mechanik, Oberteil
-* Allein für die Mechanik reicht eine Höhe des oberen Teils von 520mm und eine Breite von 420mm. 
+* Allein für die Mechanik reicht eine Höhe des oberen Teils von 520mm, mit besseren Abständen 570:
+
+| was | Höhe | Höhe von oben addiert bis Unterkante Item | 
+|-----|------|-----------------------|
+| Platz über erster Ventilreihe| 50 |  50 |
+| 1. Ventilreihe | 90 | 140 |
+| Platz zwischen Ventilreihen | 50 | 190 |
+| 2. Ventilreihe | 90 | 280 |
+| Platz zwischen Ventilreihe und Arm | 55 | 335 |
+| Arm bis Unterkante Tropfenfänger | 55 | 390 |
+| Unterkante Tropfenfänger bis Tisch | 180 | **570**
+	
+und eine Breite von 420mm auf dem Testbrett. Mit allem sollten 600mm Breite locker reichen.
+
+Also **600 x 570** für das Mechanikbrett. Ich hab mit [Fusion360](mechanikplatte.f3d) das ganze Brett durchkonstruiert. Die Idee ist es, die entstandene 1:1 [Zeichnung](mechanikplatte-bemasst-a0.pdf) auszudrucken, auf die Platte zu kleben und dann auszudremeln.
+
+#### Tiefe von alles 
+
 * Tiefe Tisch (auf dem Waage und Glocke stehen) 220mm.
 * Tiefe Rückseite (ohne Technikträgerbrett, 9mm plus Alublech) mindestens 150mm (das ist die Tiefe des Netzteils).
 * Rückwand im unteren Bereich plus Netzteilhöhe 9mm plus Alublech
 * Gesamttiefe also bisher 220 + 10 + 160 + 10 = 400
+
+=> 500
 
 #### Flaschenboden
 * Literflaschen: Ø 90mm, Höhe 320mm plus Stopfen (20) pluss etwas Luft für den Schlauch 45mm, zusammen 385.
@@ -296,24 +314,26 @@ Für Waage und Glocke. 220 x 600.
 
 #### Rückwand
 
-Vom Boden bis 200 mm über Tischhöhe?
+Vom Boden bis 200 mm über Tischhöhe, dann kann das Netzteil dort montiert werden.
 
 #### Gesamt
 
-Grundfläche 600 x 420
-
-Höhe Flaschenboden 400
-Höhe Tisch 10
-Höhe Oberteil 520
+* Grundfläche 600 Breite x 420 Tiefe
+* Höhe Flaschenboden 400
+* Höhe Tisch 10
+* Höhe Oberteil 570
 
 => Casebuilder Standard, Birkensperrholz/PVC mit bunt
 
-| Masse | Länge | Breite | Höhe |
+| Masse | Tiefe | Breite | Höhe |
 |-------|-------|--------|------|
-| innen | 550   | 650 | 930 |
-| aussen | 590 | 690 | 970 | 
+| innen | 500   | 600 | 980 |
+| aussen |  |  |  | 
 
 Und Art-Nr 0611 - F-Profil 9,1mm für den Waagentisch (beide Seiten, Rückseite an Mechanikwand), für Mechanikwand (beide Seiten), für Rückwand (beide Seiten, Boden).
 
-?? Kantenschutz für Tischkante vorn und Oberkante Rückwand Art-Nr 0655 - U-Profil 9mm
+Nachfragen:
+
+* Tiefe der Griffe in den Seiten - sollten nicht in den Raum ragen, dann lieber Griffe, die aussen angeschraubt sind? Oder Griffe an die Deckel statt an die Seitenwände.
+* Kantenschutz für Tischkante vorn und Oberkante Rückwand Art-Nr 0655 - U-Profil 9mm
 
