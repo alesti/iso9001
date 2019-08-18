@@ -46,8 +46,7 @@ In `/etc/xdg/lxsession/LXDE/autostart` eintragen:
 
 In `/home/cocktail/bin/` ein Startscript anlegen - die Anwendung hat
 lokale Pfade, ein `python3 path/to/repo/src/main.py` tut nicht in
-autostart. Dann nochmal in `/home/cocktail/.config/lxsession/LXDE/autostart` wie oben, plus `@/home/cocktail/bin/autostart.sh` - in der Systemautostart
-tut das nicht - hab gerade nicht genug Energie, um da reinzukriechen.
+autostart. Dann nochmal in `/home/cocktail/.config/lxsession/LXDE/autostart` wie oben, plus `@/home/cocktail/bin/autostart.sh` - in der Systemautostart tut das nicht - hab gerade nicht genug Energie, um da reinzukriechen.
 Anscheinend bei jedem zweiten X Neustart? So ein Scheiss.
 
 Das Touchdisplay funktioniert in Kivy nicht, auf dem LXDE Desktop aber. 
@@ -197,8 +196,7 @@ Eine Abdeckung aus Plexiglas wie beim Orginal Hector9000 wäre schon schön, ~~a
 
 Anderes HDMI-Kabel mit abgewinkeltem oder kurzem Stecker nötig, nicht
 viel Platz im Gehäuse -- selbst mit abgewinkeltem Stecker ist das kacka, weil das dann mit dem Micro-USB kollidiert.
-Wahrscheinlich haben die das im Original mit einem Flachbandkabel
-realisiert und den eigenen Stecker erst an der Rückwand des Rahmens eine HDMI-Buchse angeschlossen.
+Wahrscheinlich haben die das im Original mit einem Flachbandkabel realisiert und den eigenen Stecker erst an der Rückwand des Rahmens eine HDMI-Buchse angeschlossen.
 
 Ich hab das jetzt ausgebrochen und gut ist.
 
@@ -245,7 +243,6 @@ Eventuell was mit einem großen Pi-Hat, liegt hier rum. Oder was mit DMX, Minisp
 * Erstmal grob 270, das ist auf jeden Fall zu lang, kann wohl um 80 gekürzt werden (ist rot markiert).
 * Position ausgefahren: Freie Länge von Wand bis Armende (ohne Schlauchhalter) 120.
 
-
 ### Glockenkram / Finger
 
 Der `Mittelpunkt der Glocke` soll 100mm vom Drehpunkt des Fingers entfernt sein. 
@@ -268,6 +265,9 @@ Es ist unklar, wie weit die Griffmulden in den Bauraum reinreichen. Mail ist rau
 Um die passenden Schrauben zu bestellen zu können, geh ich erstmal von einer 9mm Siebdruckplatte als Rückwand, Servohalterung und so weiter aus.
 
 Es gibt 0,8mm Alublech bei Bauhaus (bis 1000 x 2000mm), das lässt sich gut mit normalen Werkzeugen bearbeiten.
+Oder bei [Feld
+Schlosserbedarf](https://www.feld-eitorf.de/laserzuschnitt/rechteck-mit-individuellen-ausschnitten)
+komplett konfigurieren - dann ist Edelstahl geiler...
 
 Die Siebdruckplatte dann mit Alublech beplanken (Kleben, Popnieten), ebenso für den Tisch verfahren und auch die Seitenwände und den Flaschenboden damit auskleiden (wegen der geilen Reflexionen).
 
