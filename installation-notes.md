@@ -49,17 +49,28 @@ lokale Pfade, ein `python3 path/to/repo/src/main.py` tut nicht in
 autostart. Dann nochmal in `/home/cocktail/.config/lxsession/LXDE/autostart` wie oben, plus `@/home/cocktail/bin/autostart.sh` - in der Systemautostart tut das nicht - hab gerade nicht genug Energie, um da reinzukriechen.
 Anscheinend bei jedem zweiten X Neustart? So ein Scheiss.
 
-Das Touchdisplay funktioniert in Kivy nicht, auf dem LXDE Desktop aber. 
-Geholfen hat eine Ergänzung in `.kivy/config.ini` ([Touch Input not recogonised in Kivy](https://groups.google.com/forum/#!msg/kivy-users/7a8yz1oZ3Z0/Asy14nx2BQAJ)):
-
-```
-mtdev_%(name)s = probesysfs,provider=mtdev
-hid_%(name)s = probesysfs,provider=hidinput
-```
 
 Zum Kiokmode: [Raspi Kiosk
 Mode](https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/), [Tipps](https://github.com/MobilityLab/TransitScreen/wiki/Raspberry-Pi).
 
+## Display
+
+Nach Doku die `/boot/config.txt` ändern:
+
+```
+# Waveshare 7inch HDMI LCD (C) Display
+# https://www.waveshare.com/w/upload/c/cc/7inch_HDMI_LCD_%28C%29_User_Manual.pdf
+max_usb_current=1
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 1024 600 60 6 0 0 0
+hdmi_drive=1
+# display_rotate=1 #1: 90; 2: 180; 3: 270
+``` 
+
+Booten, fertig.
+
+[Original Wiki](https://www.waveshare.com/wiki/7inch_HDMI_LCD_(C)),
 ## ATX Netzteil 
 
 Ist genormt, siehe [PSU as workbench supply](https://www.electronics-tutorials.ws/blog/convert-atx-psu-to-bench-supply.html):
@@ -130,29 +141,20 @@ Zum Testen der Waage hab ich [HX711 Beispiele](https://github.com/gandalf15/HX71
 Zum Testen des Steppers habe ich ein Skript nach https://www.rototron.info/raspberry-pi-stepper-motor-tutorial/ gebaut. Manchmal funktioniert es.
 Es rappelt ziemlich (es sind nur [STEP und DIR (wie hier)](https://www.pololu.com/picture/view/0J3360) verbunden für den Test). 
 
-## Display
 
-Nach Doku die `/boot/config.txt` ändern:
-
-```
-# Waveshare 7inch HDMI LCD (C) Display
-# https://www.waveshare.com/w/upload/c/cc/7inch_HDMI_LCD_%28C%29_User_Manual.pdf
-max_usb_current=1
-hdmi_group=2
-hdmi_mode=87
-hdmi_cvt 1024 600 60 6 0 0 0
-hdmi_drive=1
-# display_rotate=1 #1: 90; 2: 180; 3: 270
-``` 
-
-Booten, fertig.
-
-[Original Wiki](https://www.waveshare.com/wiki/7inch_HDMI_LCD_(C)),
-
+## Software
 ### Kivy Installation
 
 Als User cocktail - so wie es da steht.
 Examples wohnen in `~/.local/share/kivy-examples/demo/showcase`
+
+Das Touchdisplay funktioniert in Kivy nicht, auf dem LXDE Desktop aber. 
+Geholfen hat eine Ergänzung in `.kivy/config.ini` ([Touch Input not recogonised in Kivy](https://groups.google.com/forum/#!msg/kivy-users/7a8yz1oZ3Z0/Asy14nx2BQAJ)):
+
+```
+mtdev_%(name)s = probesysfs,provider=mtdev
+hid_%(name)s = probesysfs,provider=hidinput
+```
 
 ### Hector Software Installation
 `git clone https://github.com/H3c702/Hector9000.git`
