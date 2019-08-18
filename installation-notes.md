@@ -107,10 +107,10 @@ rot | A / 1 | 1
 blau| C / 4 | 1
 schwarz | B / 3 | 2 
 grün | D / 6 | 2
+
 ## Waage
 
 Schrauben in M5. 
-
 
 Farbe | PIN 
 ----- | ---- 
@@ -155,7 +155,7 @@ Booten, fertig.
 Als User cocktail - so wie es da steht.
 Examples wohnen in `~/.local/share/kivy-examples/demo/showcase`
 
-### Hector Installation
+### Hector Software Installation
 `git clone https://github.com/H3c702/Hector9000.git`
 
 `pip3 install --user -r requirements.txt`
@@ -261,19 +261,22 @@ Der `Mittelpunkt der Glocke` soll 100mm vom Drehpunkt des Fingers entfernt sein.
 ## Gehäuse
 
 Das ganze als Flightcase bauen, bei dem man die Vorder- und Rückseite
-als Deckel abnehmen kann. Mir gefällt ohne Verhandlungen bisher [Casebuilder](https://www.casebuilder.com/de/benutzerdefinierte-flightcase-html/rackcasedouble/entwurf) am besten.
+als Deckel abnehmen kann (`double door rack`). Mir gefällt ohne Verhandlungen bisher [Casebuilder](https://www.casebuilder.com/de/benutzerdefinierte-flightcase-html/rackcasedouble/entwurf) am besten.
 
-Um die passenden Schrauben zu bestellen zu können, geh ich erstmal von einer 12mm Siebdruckplatte als Rückwand, Servohalterung und so weiter aus.
+Es ist unklar, wie weit die Griffmulden in den Bauraum reinreichen. Mail ist raus. Eventuell müssen die Griffe in die Deckel, damit das nicht stört.
+
+Um die passenden Schrauben zu bestellen zu können, geh ich erstmal von einer 9mm Siebdruckplatte als Rückwand, Servohalterung und so weiter aus.
 
 Es gibt 0,8mm Alublech bei Bauhaus (bis 1000 x 2000mm), das lässt sich gut mit normalen Werkzeugen bearbeiten.
 
 Die Siebdruckplatte dann mit Alublech beplanken (Kleben, Popnieten), ebenso für den Tisch verfahren und auch die Seitenwände und den Flaschenboden damit auskleiden (wegen der geilen Reflexionen).
 
-Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für die LED-Beleuchtung.
+Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für die LED-Beleuchtung. Oder einfach mit einem Alu-L-Profil, wahrscheinlich einfacher.
 
 ### Maße (erste Näherung)
 
 #### Mechanik, Oberteil
+
 * Allein für die Mechanik reicht eine Höhe des oberen Teils von 520mm, mit besseren Abständen 570:
 
 | was | Höhe | Höhe von oben addiert bis Unterkante Item | 
@@ -289,6 +292,9 @@ Blech für Tisch vorne abkanten und 2cm überstehen lassen als Blendschutz für 
 und eine Breite von 420mm auf dem Testbrett. Mit allem sollten 600mm Breite locker reichen.
 
 Also **600 x 570** für das Mechanikbrett. Ich hab mit [Fusion360](mechanikplatte.f3d) das ganze Brett durchkonstruiert. Die Idee ist es, die entstandene 1:1 [Zeichnung](mechanikplatte-bemasst-a0.pdf) auszudrucken, auf die Platte zu kleben und dann auszudremeln.
+
+Enventuell ist es aber auch gar nicht so teuer, das cnc-fräsen zu
+lassen.
 
 #### Tiefe von alles 
 
@@ -318,7 +324,7 @@ Vom Boden bis 200 mm über Tischhöhe, dann kann das Netzteil dort montiert werd
 
 #### Gesamt
 
-* Grundfläche 600 Breite x 420 Tiefe
+* Grundfläche 600 Breite x 420 Tiefe => 600 x 500
 * Höhe Flaschenboden 400
 * Höhe Tisch 10
 * Höhe Oberteil 570
